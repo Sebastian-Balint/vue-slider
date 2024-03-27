@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/7a5b5a754b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">
+      <div class="container">
+        <div class="row">
+          <img
+            :src="this.imgSrc[this.index]"
+            :class="classVisible"
+            class="item"
+            alt=""
+          />
+          <div v-on:click="indexDecrease" class="prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div v-on:click="indexIncrease" class="next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/vue.js"></script>
+  </body>
+</html>
